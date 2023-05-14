@@ -20,6 +20,7 @@ public class UserRepositoryImpl implements Repository<User> {
              ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()){
                 User u = createObj(rs);
+                users.add(u);
 
             } //while
         }//try
